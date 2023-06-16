@@ -14,12 +14,35 @@
     */
 
     //ENTRADA
+    litrosVendidos = Number((prompt("Digite o número de litros vendidos: ")).trim());
+    combustivel = ("Digite o tipo de combustível (A-álcool, G-gasolina): ").trim().toLowerCase();
+
+    alcool = 6.10
+    preçoGasolina = 6.50
 
 
-    //PROCESSAMENTO
+    if (combustivel == "a") {
+        if (litrosVendidos <= 20) {
+            valorPago = litrosVendidos * (alcool - (alcool * 0.03));
+        }
+        else {
+            valorPago = litrosVendidos * (alcool - (alcool * 0.05));
+        }
+    }
+    else if (combustivel == "g") {
+        if (litrosVendidos <= 20)
+            valorPago = litrosVendidos * (preçoGasolina - (preçoGasolina * 0.04));
+        else {
+            valorPago = litrosVendidos * (preçoGasolina - (preçoGasolina * 0.06));
+        }
+    }
+    else { }
+    valorPago = 0
+    alert("Opção Inválida! Use apenas a letras informadas. ('A' para álcool ou 'G' para gasolina)");
 
-    
-    //SAÍDA
+    if (valorPago > 0) {
+        alert(`Valor a ser pago: R$${valorPago.tofixed(2).replace(".",",")}`);
+    }
 
 
 </script>

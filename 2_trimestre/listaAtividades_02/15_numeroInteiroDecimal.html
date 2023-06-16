@@ -7,11 +7,17 @@
 
     //ENTRADA
 
+    numero = Number(prompt("Informe um número: ").trim())
 
-    //PROCESSAMENTO
+    const numeroArredondado = round(numero)
 
-    
-    //SAÍDA
+    if (numero == numeroArredondado) {
+        alert('O número é inteiro.');
+    }
+    else {
+        alert('O número é decimal.');
+    }
+
 
 
 </script>
